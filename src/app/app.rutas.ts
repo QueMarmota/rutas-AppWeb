@@ -9,6 +9,8 @@ const rutas: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'registro', component: RegistroComponent },
     { path: 'crearLibro', component: CrearComponent },
+    { path: 'Libros/detalles', component: DetallesComponent },
+    { path: 'Libros/detalles/:id', component: DetallesComponent },
     { path: 'Libros/consultar', component: ConnsultarComponent },
     { path: 'libro/:id', component: DetallesComponent },
     { path: '**', redirectTo: '/login' },//Cualquier ruta desconocida mandara al login

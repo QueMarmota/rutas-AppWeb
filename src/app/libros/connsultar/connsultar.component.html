@@ -1,8 +1,17 @@
 <h1>Consultar Libros</h1>
-<ul>
-    <li><a routerLink="/libro/1">Ver libro 1</a></li>
-    <li><a routerLink="/libro/2">Ver libro 2</a></li>
-    <li><a routerLink="/libro/3">Ver libro 3</a></li>
-</ul>
-
-
+<table class="table">
+    <thead>
+        <th>Titulo</th>
+        <th>Autor</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let libro of servicioLibros.libros">
+            <td>{{libro.titulo}}</td>
+            <td>{{libro.autor}}</td>
+            <button class="btn btn-primary">
+                <a routerLink="/Libros/detalles/{{libro._id}}" >
+                    Ver
+                </a>
+            </button>
+    </tbody>
+</table>
